@@ -1,0 +1,45 @@
+/* Load Faruma font from a working CDN */
+@font-face {
+	font-family: 'Faruma';
+	src: format("truetype");
+}
+
+/* Apply Faruma and RTL to all Dhivehi content */
+[lang="dv"], .dv-text,
+.wp-block-paragraph[lang="dv"],
+.wp-block-heading[lang="dv"],
+.wp-block-quote[lang="dv"],
+.wp-block-cover[lang="dv"],
+.wp-block-group[lang="dv"],
+.wp-block-columns[lang="dv"],
+h1[lang="dv"],
+h2[lang="dv"],
+h3[lang="dv"],
+h4[lang="dv"],
+p[lang="dv"],
+div[lang="dv"],
+span[lang="dv"],
+.single-post h1.entry-title[lang="dv"],
+.single-post .entry-content[lang="dv"] {
+	font-family: 'Faruma', sans-serif !important;
+	direction: rtl !important;
+	text-align: right !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	line-height: 1.8;
+	letter-spacing: 0;
+}
+
+/* Optional: apply Faruma and RTL to all single post titles/content in Dhivehi */
+.single-post h1.entry-title,
+.single-post .entry-content {
+	font-family: 'Faruma', sans-serif !important;
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* Keep overall site layout left-to-right (menus, buttons, etc.) */
+body {
+	direction: ltr;
+	text-align: left;
+}

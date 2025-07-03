@@ -1,0 +1,134 @@
+Index.html
+
+<!DOCTYPE html>
+<html lang="dv" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ދިވެހި ވާހަކައިން</title>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"></script>
+
+    <!-- Your config -->
+    <script src="firebase-config.js"></script>
+    <script src="app.js" defer></script>
+
+    <!-- Faruma font -->
+    <style>
+        @font-face {
+            font-family: 'Faruma';
+            src: url('faruma.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Faruma', sans-serif;
+            direction: rtl;
+            background: white;
+            color: black;
+            margin: 0;
+            padding: 0 1rem;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        nav {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 1rem auto;
+            width: 80%;
+        }
+
+        .story {
+            margin-top: 2rem;
+            border-top: 1px solid #ccc;
+            padding-top: 1rem;
+        }
+
+        .story-title {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .author-date {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .comment-box {
+            margin-top: 2rem;
+        }
+
+        .comment-box textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        .comment-box button {
+            margin-top: 0.5rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ދިވެހި ވާހަކައިން</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ފުރަތަމަ ޞަފްހާ</a></li>
+                <li><a href="categories.html">އިތުރު</a></li>
+                <li><a href="register.html">ރެޖިސްޓަރ</a></li>
+                <li><a href="login.html">ލޮގިން</a></li>
+                <li><a href="contact.html">ނަންބަރު</a></li>
+                <li><a href="editor.html">އެޑިޓަރ</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section class="story">
+            <div class="author-date">Author: Adam | Date: 2025-07-03</div>
+            <div class="story-title">އެއްޗެއް ފޮތްފައި ގޮތަށް</div>
+            <p>މި ބައްދަލު ކުރި އަދި ބަދަލުވެގެން ދިވެހި ބަސްތަކާ އިރު ވަރަށް ނަގާފައި ހިމެނޭ...</p>
+
+            <div class="comment-box" id="commentBox">
+                <h3>ހިޔާލު</h3>
+                <textarea placeholder="ތިޔަ ހިޔާލު ލިޔުން..."></textarea>
+                <br>
+                <button>ފޮނުވާ</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
